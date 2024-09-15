@@ -32,14 +32,13 @@ class PlannerState():
     def to_dict(self):
         return self.__dict__
 
-# Send a POST request to the API with the state as JSON data
-def setplannerapi(state):
-    response = requests.post("https://gtsetplanner.com/api", json=state.to_dict())
-    if response.status_code == 200:
-        # Save the image as a PNG file (assuming the API returns a PNG)
-        with open('response_image.png', 'wb') as file:
-            img = Image.open(BytesIO(base64.b64decode(response.content)))
-            img.save("response_image.png")
-        print("Image saved as response_image.png")
-    else:
-        print(f"Failed to get image. Status code: {response.status_code}, Response: {response.text}")
+    # Method to get image from state
+    def getImage(self):
+        response = requests.post("https://gtsetplanner.com/api", json=self.to_dict())
+        if response.status_code == 200:
+            # Save the image as a PNG file (assuming the API returns a PNG)
+            with open('response_image.png', 'wb') as file:
+                img = Image.open(BytesIO(base64.b64decode(response.content)))
+            return img
+        else:
+            return None
