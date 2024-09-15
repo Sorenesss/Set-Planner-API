@@ -36,9 +36,7 @@ class PlannerState():
     def getImage(self):
         response = requests.post("https://gtsetplanner.com/api", json=self.to_dict())
         if response.status_code == 200:
-            # Save the image as a PNG file (assuming the API returns a PNG)
-            with open('response_image.png', 'wb') as file:
-                img = Image.open(BytesIO(base64.b64decode(response.content)))
+            img = Image.open(BytesIO(base64.b64decode(response.content)))
             return img
         else:
             return None
