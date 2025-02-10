@@ -11,7 +11,7 @@ The `PlannerState` class is a JavaScript utility designed to manage and customiz
 
 ## Installation
 
-To use the `PlannerState` class, ensure you have Node.js installed. Then, include the class in your project:
+To use the `PlannerState` class, ensure you have Node.js installed. Then, add the `gtsetplanner.js` file to your project. Once you've done that, you are able to import it:
 
 ```javascript
 const sp = require('./gtsetplanner.js');
