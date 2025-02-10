@@ -14,7 +14,7 @@ The `PlannerState` class is a JavaScript utility designed to manage and customiz
 To use the `PlannerState` class, ensure you have Node.js installed. Then, include the class in your project:
 
 ```javascript
-const PlannerState = require('./PlannerState.js');
+const sp = require('./gtsetplanner.js');
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ const PlannerState = require('./PlannerState.js');
 Create an instance of the PlannerState class:
 
 ```javascript
-const planner = new PlannerState();
+const planner = new sp.PlannerState();
 ```
 
 ### Customize 
