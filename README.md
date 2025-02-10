@@ -1,6 +1,6 @@
-# PlannerState Class
+# Growtopia Set Planner
 
-The `PlannerState` class is a JavaScript utility designed to manage and customize character appearance and equipment settings for a game or application. It provides methods to set and retrieve various attributes such as equipped items, skin color, expressions, and more. Additionally, it supports generating and saving images based on the current state.
+The `PlannerState` class is a JavaScript utility designed to manage and customize character appearance and equipment settings for Growtopia-related applications. It provides methods to set and retrieve various attributes such as equipped items, skin color, expressions, and more. Additionally, it supports generating and saving images based on the current state.
 
 ## Features
 
