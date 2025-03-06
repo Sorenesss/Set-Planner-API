@@ -187,7 +187,12 @@ planner.saveImage('plannerimage.png')
 - `PerilousPirateShip(version)`  
   Set Perilous Pirate Ship version.  
   **Parameters**:  
-  - `version` (number): `0` for Pet, `1` for Ride (transmuted).  
+  - `version` (number): `0` for Pet, `1` for Ride (transmuted).
+
+- `AnomalyAura(version)`  
+  Set Anomaly Aura version.  
+  **Parameters**:  
+  - `version` (number): `0` for Dark Anomaly, `1` for Light Anomaly.
 
 - `InfinityCrown(basergb, gemrgb, crystalrgb, float, crystal, rays)`  
   Configure Infinity Crown.  
