@@ -27,6 +27,7 @@ class PlannerState {
     #artlevel;
     #infinityfist;
     #bbandolier;
+    #anomaly;
 
     constructor() {
         this.#equipped = [0,0,0,0,0,0,0,0,0,0];
@@ -54,6 +55,7 @@ class PlannerState {
         this.#artlevel = 0;
         this.#infinityfist = [[122, 10, 250], [65, 65, 65], [78, 255, 0], 0];
         this.#bbandolier = ['harlequin', 0];
+        this.#anomaly = 0;
     }
 
     // Method to return a public version of the private data as an object
@@ -83,7 +85,8 @@ class PlannerState {
             handmovement: this.#handmovement,
             artlevel: this.#artlevel,
             infinityfist: this.#infinityfist,
-            bbandolier: this.#bbandolier
+            bbandolier: this.#bbandolier,
+            anomaly: this.#anomaly
         };
     }
 
@@ -479,6 +482,17 @@ class PlannerState {
      * - 1: Ride (transmuted)
      */
     PerilousPirateShip(version){
+        this.#perilous=version%2;
+    }
+
+    /**
+     * Settings for Anomaly Aura.
+     * 
+     * @param {number} version - The Anomaly Aura's version:
+     * - 0: Dark Anomaly
+     * - 1: Light Anomaly
+     */
+    AnomalyAura(version){
         this.#perilous=version%2;
     }
 
