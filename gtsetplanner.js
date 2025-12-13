@@ -28,6 +28,7 @@ class PlannerState {
     #infinityfist;
     #bbandolier;
     #anomaly;
+    #wingsofinfinity
 
     constructor() {
         this.#equipped = [0,0,0,0,0,0,0,0,0,0];
@@ -56,6 +57,7 @@ class PlannerState {
         this.#infinityfist = [[122, 10, 250], [65, 65, 65], [78, 255, 0], 0];
         this.#bbandolier = ['harlequin', 0];
         this.#anomaly = 0;
+        this.#wingsofinfinity = [[0,120,220], [255,73,255], [0,120,220], [255,73,255], [0,120,220], [255,73,255], [0,120,220], [255,73,255], [1,1,1,1], [0,0,0,0]]
     }
 
     // Method to return a public version of the private data as an object
@@ -493,7 +495,7 @@ class PlannerState {
      * - 1: Light Anomaly
      */
     AnomalyAura(version){
-        this.#perilous=version%2;
+        this.#anomaly=version%2;
     }
 
     /**
@@ -674,4 +676,27 @@ class PlannerState {
         const patterns = ['harlequin', 'slant', 'stripe', 'panel', 'cross'];
         this.#bbandolier=[patterns[pattern%5], 0];
     }
+
+    /**
+     * Settings for Wings of Infinity.
+     * 
+     * @param {number[]} tl_wings_primary_rgb - The Primary RGB color of the Top Left Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} tl_wings_secondary_rgb - The Secondary RGB color of the Top Left Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} tr_wings_primary_rgb - The Primary RGB color of the Top Right Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} tr_wings_secondary_rgb - The Secondary RGB color of the Right Left Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} bl_wings_primary_rgb - The Primary RGB color of the Bottom Left Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} bl_wings_secondary_rgb - The Secondary RGB color of Bottom Top Left Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} br_wings_primary_rgb - The Primary RGB color of the Bottom Right Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} br_wings_secondary_rgb - The Secondary RGB color of the Bottom Right Wing, represented as an array of 3 numbers [R, G, B], where each number is between 0 and 255.
+     * @param {number[]} wing_visibility - The Wing Visibility, represented as an array of 4 numbers [top_left_wing, top_right_wing, bottom_left_wing, bottom_right_wing]:
+     * - 0: Hidden
+     * - 1: Visible (Default)
+     * @param {number[]} wing_theme - The Wing Theme, represented as an array of 4 numbers [top_left_wing, top_right_wing, bottom_left_wing, bottom_right_wing]:
+     * - 0: Feathered (Default)
+     * - 1: Mechanical
+     */
+    WingsofInfinity(tl_wings_primary_rgb, tl_wings_secondary_rgb, tr_wings_primary_rgb, tr_wings_secondary_rgb, bl_wings_primary_rgb, bl_wings_secondary_rgb, br_wings_primary_rgb, br_wings_secondary_rgb, wing_visibility, wing_theme){
+        this.#wingsofinfinity=[tl_wings_primary_rgb, tl_wings_secondary_rgb, tr_wings_primary_rgb, tr_wings_secondary_rgb, bl_wings_primary_rgb, bl_wings_secondary_rgb, br_wings_primary_rgb, br_wings_secondary_rgb, wing_visibility, wing_theme];
+    }
 }
+
