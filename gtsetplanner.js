@@ -88,7 +88,8 @@ class PlannerState {
             artlevel: this.#artlevel,
             infinityfist: this.#infinityfist,
             bbandolier: this.#bbandolier,
-            anomaly: this.#anomaly
+            anomaly: this.#anomaly,
+            wingsofinfinity: this.#wingsofinfinity
         };
     }
 
@@ -699,4 +700,5 @@ class PlannerState {
         this.#wingsofinfinity=[tl_wings_primary_rgb, tl_wings_secondary_rgb, tr_wings_primary_rgb, tr_wings_secondary_rgb, bl_wings_primary_rgb, bl_wings_secondary_rgb, br_wings_primary_rgb, br_wings_secondary_rgb, wing_visibility, wing_theme];
     }
 }
+
 
