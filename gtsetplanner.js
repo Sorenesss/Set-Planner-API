@@ -53,7 +53,7 @@ class PlannerState {
         this.#ahool = [true, true];
         this.#celesdragcharm = 0;
         this.#handmovement = 0;
-        this.#artlevel = 0;
+        this.#artlevel = [0,0,0,0,0];
         this.#infinityfist = [[122, 10, 250], [65, 65, 65], [78, 255, 0], 0];
         this.#bbandolier = ['harlequin', 0];
         this.#anomaly = 0;
@@ -700,5 +700,6 @@ class PlannerState {
         this.#wingsofinfinity=[tl_wings_primary_rgb, tl_wings_secondary_rgb, tr_wings_primary_rgb, tr_wings_secondary_rgb, bl_wings_primary_rgb, bl_wings_secondary_rgb, br_wings_primary_rgb, br_wings_secondary_rgb, wing_visibility, wing_theme];
     }
 }
+
 
 
